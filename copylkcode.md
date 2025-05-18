@@ -1,0 +1,1 @@
+copylkcode.mdを追加
