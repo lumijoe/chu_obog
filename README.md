@@ -1,5 +1,5 @@
 # chu_obog
-
+ログイン機能リベース0519
 gitテスト
 お知らせ一覧のサイト構築をarchive.php、home.phpと揃えること
 
