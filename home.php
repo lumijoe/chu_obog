@@ -24,10 +24,10 @@ get_header();
 <div id="overlay"></div>
 <div id="login-form">
   <button class="close-btn" id="close-btn">✕</button>
-  <h2>ログイン</h2>
-  <form>
-    <label>ユーザー名：<br /><input type="text" id="username" name="username" placeholder="ユーザー名" required /></label><br /><br />
-    <label>パスワード：<br /><input type="password" id="password" name="password" placeholder="パスワード" required /></label><br /><br />
+  <h2 class="modal-title">会員専用ページ</h2>
+  <form class="modal-form">
+    <label>ユーザー名<br /><input type="text" id="username" name="username" placeholder="ユーザー名" required /></label><br /><br />
+    <label>パスワード<br /><input type="password" id="password" name="password" placeholder="パスワード" required /></label><br /><br />
     <button type="submit">ログイン</button>
   </form>
 </div>
