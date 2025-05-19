@@ -1,14 +1,6 @@
 <?php get_header(); ?>
-<!-- パンくずリスト　 -->
-<!-- <section class="l-breadcrumb">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="<?php echo home_url('/'); ?>">TOP</a></li>
-            <li class="breadcrumb-item"><a href="<?php echo home_url('/news'); ?>">お知らせ一覧</a></li>
-            <li class="breadcrumb-item active" aria-current="page">全体行事</li>
-        </ol>
-    </nav>
-</section> -->
+<!-- ログインアラート -->
+<?php get_template_part('template-parts/login-alert'); ?>
 
 <!-- titleview -->
 <section class="l-titleview">
@@ -101,5 +93,6 @@
 
 <!-- OBOGの皆さまへ -->
 <?php get_template_part('template-parts/obog-banner'); ?>
+
 
 <?php get_footer(); ?>
