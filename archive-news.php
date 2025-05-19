@@ -1,14 +1,7 @@
 <!-- カスタム投稿の一覧 -->
 <?php get_header(); ?>
-<!-- <section class="l-breadcrumb">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="<?php echo home_url('/'); ?>">TOP</a></li>
-            <li class="breadcrumb-item"><a href="<?php echo home_url('/news'); ?>">お知らせ一覧</a></li>
-        </ol>
-    </nav>
-</section> -->
-
+<!-- ログインアラート -->
+<?php get_template_part('template-parts/login-alert'); ?>
 <!-- titleview -->
 <section class="l-titleview">
     <img src="<?php echo get_template_directory_uri(); ?>/images/common/img_page_news.png" alt="お知らせ一覧のページビュー">
