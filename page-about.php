@@ -7,21 +7,7 @@
 
 get_header();
 ?>
-<!-- <section class="l-breadcrumb">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="<?php echo home_url('/'); ?>">TOP</a></li>
-            <li class="breadcrumb-item"><a href="<?php echo home_url('/about'); ?>">OBOGクラブについて</a></li>
-        </ol>
-    </nav>
-</section> -->
-<!-- titleview -->
-<!-- <section class="l-titleview">
-    <img src="https://dummyimage.com/1200x110/dde1e6/dde1e6.jpg" alt="">
-    <div class="l-titleview-ttl">
-        <p>OBOGクラブについて</p>
-    </div>
-</section> -->
+<?php get_template_part('template-parts/login-alert'); ?>
 <!-- titleview -->
 <section class="l-titleview">
     <img src="<?php echo get_template_directory_uri(); ?>/images/about/img_page_about.png" alt="OBOGクラブについて">
