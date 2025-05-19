@@ -28,9 +28,15 @@ get_header();
   <form class="modal-form">
     <label>ユーザー名<br /><input type="text" id="username" name="username" placeholder="ユーザー名" required /></label><br /><br />
     <label>パスワード<br /><input type="password" id="password" name="password" placeholder="パスワード" required /></label><br /><br />
-    <button type="submit">ログイン</button>
+    <button type="submit" class="login-submit">
+      <div class="submit-left"></div>
+      <div>ログインする</div>
+      <img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_right_bgblue.svg" alt="">
+    </button>
   </form>
 </div>
+
+<img src="" alt="">
 
 <!-- お知らせ新着 -->
 <section class="l-news-latest l-article">
