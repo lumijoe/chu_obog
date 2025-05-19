@@ -6,7 +6,7 @@
 get_header();
 ?>
 
-<!-- スライダー -->
+<!-- ヒーロー -->
 <section id="home">
   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" style="z-index:2000;">
     <div class="carousel-inner">
@@ -19,6 +19,18 @@ get_header();
       </div>
     </div>
 </section>
+
+<!--ログインフォーム  -->
+<div id="overlay"></div>
+<div id="login-form">
+  <button class="close-btn" id="close-btn">✕</button>
+  <h2>ログイン</h2>
+  <form>
+    <label>ユーザー名：<br /><input type="text" id="username" name="username" placeholder="ユーザー名" required /></label><br /><br />
+    <label>パスワード：<br /><input type="password" id="password" name="password" placeholder="パスワード" required /></label><br /><br />
+    <button type="submit">ログイン</button>
+  </form>
+</div>
 
 <!-- お知らせ新着 -->
 <section class="l-news-latest l-article">
@@ -90,9 +102,7 @@ get_header();
   <button class="btn btn-primay add-icon"><a href="<?php echo get_post_type_archive_link('news'); ?>">お知らせ一覧へ</a></button>
 </section>
 
-
-
-<!-- 各ニュース -->
+<!-- ページバナー -->
 <section class="l-pagebanner">
   <div class="l-pagebanner-inner grid-container">
     <figure class="grid-item">
@@ -158,6 +168,5 @@ get_header();
 
 <!-- OBOGの皆さまへ -->
 <?php get_template_part('template-parts/obog-banner'); ?>
-
-
+<!-- フッター -->
 <?php get_footer(); ?>
