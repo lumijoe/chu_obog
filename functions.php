@@ -24,6 +24,32 @@ add_action('wp_enqueue_scripts', 'custom_theme_enqueue_styles');
 
 
 // ========================
+// スクリプト設定
+// ========================
+function custom_theme_enqueue_scripts()
+{
+    wp_enqueue_script(
+        // アラートテスト
+        'home-js',
+        get_template_directory_uri() . '/assets/js/home.js',
+        array(),
+        filemtime(get_template_directory() . '/assets/js/home.js'),
+        true // footerでの読み込みtrue
+    );
+
+    wp_enqueue_script(
+        // ログインテスト
+        'login-js',
+        get_template_directory_uri() . '/assets/js/login.js',
+        array(),
+        filemtime(get_template_directory() . '/assets/js/login.js'),
+        true
+    );
+}
+add_action('wp_enqueue_scripts', 'custom_theme_enqueue_scripts');
+
+
+// ========================
 // 管理画面：ロゴ設定
 // ========================
 function my_login_logo()
@@ -184,11 +210,11 @@ add_action('admin_head', 'custom_admin_styles');
 
 
 // ========================
-// 認証：.env を読み込む関数、環境変数
+// .env の読み込み（WordPressルート直下）
 // ========================
 function load_env()
 {
-    $env_path = ABSPATH . '.env'; // public/.env のパス（ABSPATH は WordPressルートのパス）
+    $env_path = ABSPATH . '.env';
     if (file_exists($env_path)) {
         $lines = file($env_path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
         foreach ($lines as $line) {
@@ -202,74 +228,23 @@ add_action('init', 'load_env');
 
 
 // ========================
-// 認証：セッションスタート（必須）
+// login.js の読み込みと .env 情報の注入
 // ========================
-function start_session()
+function enqueue_login_script()
 {
-    if (!session_id()) {
-        session_start();
-    }
+    // login.js の読み込み（あなたのテーマの /js/login.js にあると仮定）
+    wp_enqueue_script(
+        'login-js',
+        get_template_directory_uri() . '/js/login.js',
+        array(), // 依存スクリプトがあれば ['jquery'] などを指定
+        null,
+        true // フッターで読み込む
+    );
+
+    // JavaScript に .env 情報を渡す
+    wp_localize_script('login-js', 'envVars', [
+        'username' => $_ENV['CROBC_USERNAME'] ?? '',
+        'password' => $_ENV['CROBC_PASSWORD'] ?? '',
+    ]);
 }
-add_action('init', 'start_session', 1);
-
-
-// ========================
-// 認証：ログインチェック（Ajax）
-// ========================
-function handle_login_check()
-{
-    $username = $_ENV['CROBC_USERNAME'] ?? '';
-    $password = $_ENV['CROBC_PASSWORD'] ?? '';
-
-    $input_username = sanitize_text_field($_POST['username'] ?? '');
-    $input_password = sanitize_text_field($_POST['password'] ?? '');
-
-    if ($input_username === $username && $input_password === $password) {
-        // セッションにログイン状態を保存
-        $_SESSION['logged_in'] = true;
-        wp_send_json_success();
-    } else {
-        wp_send_json_error();
-    }
-
-    wp_die();
-}
-add_action('wp_ajax_login_check', 'handle_login_check');
-add_action('wp_ajax_nopriv_login_check', 'handle_login_check');
-
-
-// ========================
-// 認証：ログイン状態確認関数（テンプレートなどで使う用）
-// ========================
-function is_logged_in()
-{
-    return isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true;
-}
-
-function restrict_pages_if_not_logged_in()
-{
-    if (
-        !is_logged_in() &&                         // ログインしていない
-        !is_front_page() &&                        // トップページではない
-        !is_admin() &&                             // 管理画面ではない
-        !defined('DOING_AJAX')                     // AJAX通信中ではない
-    ) {
-        wp_redirect(home_url());                  // トップにリダイレクト
-        exit;
-    }
-}
-add_action('template_redirect', 'restrict_pages_if_not_logged_in');
-
-
-// ========================
-// 認証：ログアウト処理（GETでログアウト）
-// ========================
-function handle_custom_logout()
-{
-    if (isset($_GET['action']) && $_GET['action'] === 'oboglogout') {
-        $_SESSION['logged_in'] = false;
-        wp_redirect(home_url('/'));
-        exit;
-    }
-}
-add_action('init', 'handle_custom_logout');
+add_action('wp_enqueue_scripts', 'enqueue_login_script');
