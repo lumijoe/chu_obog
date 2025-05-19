@@ -1,9 +1,4 @@
 // login.js
-// 本番ではログアウト
-console.log("Username from .env:", envVars.username);
-console.log("Password from .env:", envVars.password);
-
-
 // セッションストレージでログイン状態を管理
 function isLoggedIn() {
   return sessionStorage.getItem("loggedIn") === "true";
