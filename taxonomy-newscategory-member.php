@@ -19,7 +19,7 @@
     <button class="is-current"><a href="<?php echo home_url('/newscategory/member/'); ?>">会員だより</a></button>
 </div>
 
-<p class="l-page-caption">会員の入会情報や慶弔情報、近況報告、随想などを掲載しています</p>
+<p class="l-page-caption">会員の入会情報や慶弔情報<span class="display-800-none">、</span><br class="d-none display-800">近況報告、随想などを<br class="d-none display-590">掲載しています</p>
 
 <!-- サイドバー -->
 <div class="l-side-grid">

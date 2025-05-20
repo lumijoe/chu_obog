@@ -278,11 +278,18 @@ section.for-all {
         gap: 35px;
     }
 }
+
 @media (max-width: 605px) {
     .hero-carousel {
         .sp-605 {
             display: block!important;
         }
+    }
+    .l-news-latest {
+        margin-top: 20px!important ;
+    }
+    .l-article ul {
+        padding: 2rem 0rem 0.1rem 0rem!important;
     }
 }
 .main {

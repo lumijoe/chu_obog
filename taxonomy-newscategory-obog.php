@@ -19,8 +19,8 @@
     <button><a href="<?php echo home_url('/newscategory/member/'); ?>">会員だより</a></button>
 </div>
 
-<p class="l-page-caption">全国の各OBOG会からのご案内やレポートを掲載しています<br>
-    幹事の皆様からのご投稿をお待ちしております</p>
+<p class="l-page-caption">全国の各OBOG会からのご案内や<br class="d-none display-800">レポートを掲載しています<br>
+    幹事の皆様からのご投稿を<br class="d-none display-800">お待ちしております</p>
 
 <!-- サイドバー -->
 <div class="l-side-grid">

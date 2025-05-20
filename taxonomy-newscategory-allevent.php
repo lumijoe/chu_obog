@@ -18,7 +18,7 @@
     <button><a href="<?php echo home_url('/newscategory/member/'); ?>">会員だより</a></button>
 </div>
 
-<p class="l-page-caption">中外炉OBOGクラブが主催する全体の行事です</p>
+<p class="l-page-caption">中外炉OBOGクラブが主催する<br class="d-none display-800">全体の行事です</p>
 
 <!-- サイドバー -->
 <div class="l-side-grid">

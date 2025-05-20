@@ -19,7 +19,7 @@
     <button><a href="<?php echo home_url('/newscategory/member/'); ?>">会員だより</a></button>
 </div>
 
-<p class="l-page-caption">会社からのお知らせや近況等を掲載しています</p>
+<p class="l-page-caption">会社からのお知らせや<br class="d-none display-800">近況等を掲載しています</p>
 
 <!-- サイドバー -->
 <div class="l-side-grid">

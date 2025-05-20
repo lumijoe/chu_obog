@@ -14,7 +14,7 @@
 </section>
 
 <!-- 記事セクション -->
-<div class="l-side-grid single-wrapper">
+<div class="l-side-grid single-wrapper" style="margin: 2rem;">
     <section class="l-article article-single-wrapper">
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <article>
@@ -56,9 +56,6 @@
                     <h2><?php the_field('post_title'); ?></h2>
 
                     <hr>
-                    <!-- ACF本文 -->
-                    <p><?php the_field('post_text'); ?></p>
-                    <!-- 画像 -->
                     <!-- 画像 -->
                     <?php if (get_field('post_image')) : ?>
                         <img src="<?php the_field('post_image'); ?>"
@@ -71,28 +68,32 @@
                     <!-- PDF -->
                     <?php if (get_field('post_pdf') && get_field('post_pdf_title')) : ?>
                         <p class="pdf-title">
-                            <a href="<?php the_field('post_pdf'); ?>" target="_blank" rel="noopener noreferrer">
+                            <a href="<?php the_field('post_pdf'); ?>" target="_blank" rel="noopener noreferrer" style="color: #29318a;">
                                 <?php the_field('post_pdf_title'); ?>
                             </a>
                         </p>
                     <?php endif; ?>
+
+                    <!-- ACF本文 -->
+                    <p><?php the_field('post_text'); ?></p>
                     <!-- 外部リンク -->
                     <?php if (get_field('post_url')) : ?>
                         <p class="post-url">
-                            <a href="<?php the_field('post_url'); ?>" target="_blank" rel="noopener noreferrer">
+                            <a href="<?php the_field('post_url'); ?>" target="_blank" rel="noopener noreferrer" style="color: #29318a;">
                                 <?php the_field('post_url'); ?>
                             </a>
                         </p>
                     <?php endif; ?>
+
                     <hr>
                 </article>
 
                 <!-- 前後の記事ナビゲーション -->
-                <nav>
+                <nav style="margin-top: 3rem; text-align: center;" class="single-nav-other">
                     <p><?php previous_post_link('« %link'); ?></p>
-                    <p><a href="<?php echo get_post_type_archive_link('news'); ?>">一覧へ戻る</a></p>
                     <p><?php next_post_link('%link »'); ?></p>
                 </nav>
+                <button class="btn btn-primay add-icon" style="margin-top: 2rem; margin-bottom: 2rem;"><a href="<?php echo get_post_type_archive_link('news'); ?>">一覧へ戻る</a></button>
 
             <?php endwhile;
         else : ?>
