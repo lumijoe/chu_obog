@@ -93,7 +93,8 @@
                     <p><?php previous_post_link('« %link'); ?></p>
                     <p><?php next_post_link('%link »'); ?></p>
                 </nav>
-                <button class="btn btn-primay add-icon" style="margin-top: 2rem; margin-bottom: 2rem;"><a href="<?php echo get_post_type_archive_link('news'); ?>">一覧へ戻る</a></button>
+                <a href="<?php echo get_post_type_archive_link('news'); ?>" class="btn add-icon next">一覧へ戻る</a>
+                <!-- <button class="btn btn-primay add-icon" style="margin-top: 2rem; margin-bottom: 2rem;"><a href="<?php echo get_post_type_archive_link('news'); ?>">一覧へ戻る</a></button> -->
 
             <?php endwhile;
         else : ?>

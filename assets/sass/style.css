@@ -859,7 +859,7 @@ span.tag_new {
 }
 
 .single-wrapper {
-  margin-top: 20px;
+  margin: 2rem auto !important;
 }
 
 .aside-area {
