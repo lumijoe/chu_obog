@@ -1262,21 +1262,21 @@ hr {
   border-radius: 60px;
   background-color: #F5F5F5;
   display: flex;
+  align-items: center;
   font-size: 14px;
   width: 216px;
   flex-direction: row;
   justify-content: space-between;
   height: 60px;
   padding-left: 25px;
-}
-.add-icon a {
   color: #0E1346;
   text-decoration: none !important;
   font-weight: 400;
   letter-spacing: 0.04rem;
+  margin: 0 auto;
 }
 
-.add-icon::after {
+.add-icon.next::after {
   content: "";
   display: inline-block;
   width: 32px;
