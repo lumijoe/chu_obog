@@ -926,13 +926,14 @@ span.tag_new {
   flex-direction: row;
   width: 178px;
   height: 56px;
-  background-color: #525360;
+  background-color: #f1f1f1;
   gap: 0.2rem;
-  color: white;
+  color: #29318a;
   text-decoration: none;
   padding: 0 1rem 0 0.5rem;
   letter-spacing: 0.08rem;
   justify-content: space-between;
+  border-radius: 3px;
 }
 .l-category-tab2 .txt-short {
   padding: 0 1rem 0 1rem;
@@ -948,8 +949,6 @@ span.tag_new {
 }
 .l-category-tab2 .is-current {
   background-color: #29318a;
-}
-.l-category-tab2 .is-current a {
   color: white;
 }
 .l-category-tab2 .cat-left {

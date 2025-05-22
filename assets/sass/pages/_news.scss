@@ -99,13 +99,14 @@ span.tag_new {
         flex-direction: row;
         width: 178px;
         height: 56px;
-        background-color: #525360;
+        background-color: #f1f1f1;
         gap: 0.2rem;
-        color: white;
+        color: #29318a;
         text-decoration: none;
         padding: 0 1rem 0 0.5rem;
         letter-spacing: 0.08rem;
         justify-content: space-between;
+        border-radius: 3px;
     }
     .txt-short {
         padding: 0 1rem 0 1rem;
@@ -121,9 +122,7 @@ span.tag_new {
     }
     .is-current {
         background-color: #29318a;
-        a {
-            color: white;
-        }
+        color: white;
     }
     .cat-left {
         width: 12px;
