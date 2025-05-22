@@ -131,6 +131,9 @@
         align-items: center;
         margin: 0 auto;
     }
+    ul {
+        padding: 2rem 0!important;
+    }
 }
 .l-pagebanner {
     max-width: calc(800px + 10%);
