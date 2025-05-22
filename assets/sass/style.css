@@ -27,7 +27,6 @@
 }
 .footer section .is-corporate figcaption a {
   color: white;
-  text-decoration: none !important;
 }
 .footer section .is-corporate img {
   width: 300px;
@@ -1300,4 +1299,9 @@ button {
   display: flex;
   align-items: center;
   margin: 0 auto;
+}
+
+a.line-display {
+  text-decoration-line: underline !important;
+  text-decoration-color: currentColor;
 }/*# sourceMappingURL=style.css.map */

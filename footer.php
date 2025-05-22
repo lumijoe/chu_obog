@@ -29,7 +29,7 @@
                 </ul>
             </div>
             <figure class="is-corporate">
-                <figcaption>公式サイトは <a href="https://chugai.co.jp/" target="_blank" rel="noopener noreferrer">こちら</a></figcaption>
+                <figcaption>公式サイトは <a href="https://chugai.co.jp/" target="_blank" rel="noopener noreferrer" class="line-display">こちら</a></figcaption>
                 <img src="<?php echo get_template_directory_uri(); ?>/images/home/footer-banner-corporate.png" alt="コーポレートサイトのバナー">
             </figure>
         </div>
