@@ -105,7 +105,8 @@ get_header();
       <p>お知らせはまだありません。</p>
     <?php endif; ?>
   </div>
-  <button class="btn btn-primay add-icon"><a href="<?php echo get_post_type_archive_link('news'); ?>">お知らせ一覧へ</a></button>
+  <a href="<?php echo get_post_type_archive_link('news'); ?>" class="btn add-icon next">お知らせ一覧へ</a>
+  <!-- <button class="btn btn-primay add-icon"><a href="<?php echo get_post_type_archive_link('news'); ?>">お知らせ一覧へ</a></button> -->
 </section>
 
 <!-- ページバナー -->

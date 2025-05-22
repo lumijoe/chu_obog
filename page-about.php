@@ -72,8 +72,6 @@ get_header();
             毎月25日までにご入稿頂いた原稿は、翌月10日頃までに掲載させていただきます。</p>
     </section>
     <a href="<?php echo home_url('/'); ?>" class="btn add-icon next">トップへ戻る</a>
-    <!-- <button class="btn btn-primay add-icon"><a href="<?php echo home_url('/'); ?>">トップへ戻る</a></button> -->
-
 
 </section>
 
