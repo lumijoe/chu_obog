@@ -23,8 +23,7 @@ span.tag_new {
         transform: translate(0, -50%);
         left: 3rem;
         color: #232323;
-        padding-right: 3rem;
-        width: 100%;
+        width: calc(100% - 6rem);
         display: flex;
         p {
             margin-bottom: 0 !important;
