@@ -153,7 +153,7 @@ get_header();
         <img src="<?php echo get_template_directory_uri(); ?>/images/home/img_home_obog.png" alt="" srcset="" class="is-wide img-tight">
         <div class="is-row">
           <figcaption>
-            <h2>OBOGだより</h2>
+            <h2>OBOG会だより</h2>
           </figcaption>
           <img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_right_bgwhite.svg" alt="">
         </div>

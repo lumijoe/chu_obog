@@ -6,7 +6,7 @@
 <section class="l-titleview">
     <img src="<?php echo get_template_directory_uri(); ?>/images/common/img_page_obog.png" alt="OBOG会だよりページビュー">
     <div class="l-titleview-ttl">
-        <p><?php single_term_title(); ?></p>
+        <!-- <p><?php single_term_title(); ?></p> -->
     </div>
 </section>
 
