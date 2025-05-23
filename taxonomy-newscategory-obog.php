@@ -15,17 +15,17 @@
     <a href="<?php echo home_url('/news'); ?>" class="txt-middle">
         <div class="cat-left"></div>
         <p class="cat-center">お知らせ一覧</p>
-        <img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_catarrow_blue.svg" alt="" width="12" height="12">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_catarrow_blue.svg" alt="" width="12" height="12" class="toright">
     </a>
     <a href="<?php echo home_url('/newscategory/allevent/'); ?>" class="txt-short">
         <div class="cat-left"></div>
         <p class="cat-center">全体行事</p>
-        <img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_catarrow_blue.svg" alt="" width="12" height="12">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_catarrow_blue.svg" alt="" width="12" height="12" class="toright">
     </a>
     <a href="<?php echo home_url('/newscategory/company/'); ?>" class="txt-short">
         <div class="cat-left"></div>
         <p class="cat-center">会社だより</p>
-        <img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_catarrow_blue.svg" alt="" width="12" height="12">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_catarrow_blue.svg" alt="" width="12" height="12" class="toright">
     </a>
     <a href="<?php echo home_url('/newscategory/obog/'); ?>" class="is-current txt-long">
         <div class="cat-left"></div>
@@ -35,16 +35,9 @@
     <a href="<?php echo home_url('/newscategory/member/'); ?>" class="txt-short">
         <div class="cat-left"></div>
         <p class="cat-center">会員だより</p>
-        <img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_catarrow_blue.svg" alt="" width="12" height="12">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_catarrow_blue.svg" alt="" width="12" height="12" class="toright">
     </a>
 </div>
-<!-- <div class="l-category-tab">
-    <button><a href="<?php echo home_url('/news'); ?>">お知らせ一覧</a></button>
-    <button><a href="<?php echo home_url('/newscategory/allevent/'); ?>">全体行事</a></button>
-    <button><a href="<?php echo home_url('/newscategory/company/'); ?>">会社だより</a></button>
-    <button class="is-current"><a href="<?php echo home_url('/newscategory/obog/'); ?>">OBOG会だより</a></button>
-    <button><a href="<?php echo home_url('/newscategory/member/'); ?>">会員だより</a></button>
-</div> -->
 
 <p class="l-page-caption">全国の各OBOG会からのご案内や<br class="d-none display-800">レポートを掲載しています<br>
     幹事の皆様からのご投稿を<br class="d-none display-800">お待ちしております</p>

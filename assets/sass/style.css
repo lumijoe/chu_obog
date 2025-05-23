@@ -879,6 +879,9 @@ span.tag_new {
   padding-right: 1rem;
   padding-left: 1rem;
 }
+.l-category-tab2 img.toright {
+  transform: rotate(-90deg);
+}
 .l-category-tab2 a {
   display: flex;
   align-items: center;
