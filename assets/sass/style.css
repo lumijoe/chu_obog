@@ -908,6 +908,7 @@ span.tag_new {
 }
 .l-category-tab2 a:hover {
   opacity: 0.8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .l-category-tab2 .is-current {
   background-color: #29318a;
