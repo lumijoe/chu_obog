@@ -277,6 +277,27 @@
   height: 104px;
   position: relative;
 }
+.header #navbarSupportedContentPC {
+  height: 104px;
+}
+.header #navbarSupportedContentPC .pc-only-cta {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header #navbarSupportedContentPC .pc-only-cta .pc-cta-wrapper img {
+  max-width: 100%;
+  margin-bottom: 6px;
+}
+.header #navbarSupportedContentPC .pc-only-cta .pc-cta-wrapper p {
+  margin-bottom: 0 !important;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 450;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0 !important;
+}
 .header .bg-body-tertiary {
   background-color: white !important;
 }
@@ -368,6 +389,7 @@
   align-items: center;
 }
 .header .navbar {
+  padding: 0;
   position: fixed;
   top: 0;
   left: 0;
