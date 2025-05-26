@@ -232,7 +232,7 @@ add_action('init', 'load_env');
 // ========================
 function enqueue_login_script()
 {
-    // login.js の読み込み（あなたのテーマの /js/login.js にあると仮定）
+    // login.js の読み込み（/js/login.js）
     wp_enqueue_script(
         'login-js',
         get_template_directory_uri() . '/js/login.js',
