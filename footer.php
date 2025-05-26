@@ -29,7 +29,7 @@
                 </ul>
             </div>
             <figure class="is-corporate">
-                <figcaption>公式サイトは <a href="https://chugai.co.jp/" target="_blank" rel="noopener noreferrer" class="line-display">こちら</a></figcaption>
+                <figcaption>公式サイトは <a href="https://chugai.co.jp/" target="_blank" rel="noopener noreferrer" class="line-display logtrue">こちら</a></figcaption>
                 <img src="<?php echo get_template_directory_uri(); ?>/images/home/footer-banner-corporate.png" alt="コーポレートサイトのバナー">
             </figure>
         </div>
@@ -40,10 +40,10 @@
                 <figure>
                     <img class="is-footerlogo" src="<?php echo get_template_directory_uri(); ?>/images/home/footer-logo.svg" alt="コーポレートサイトロゴ">
                 </figure>
-                <a href="https://twitter.com/CHUGAIRO_pr" target="_blank" rel="noopener noreferrer">
+                <a href="https://twitter.com/CHUGAIRO_pr" target="_blank" rel="noopener noreferrer" class="logtrue">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/home/icon_logo_x.png" alt="エックスアイコン" class="sns_logo">
                 </a>
-                <a href="https://www.youtube.com/@chugairo9408" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.youtube.com/@chugairo9408" target="_blank" rel="noopener noreferrer" class="logtrue">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/home/icon_logo_youtube.png" alt="youtubeアイコン" class="sns_logo">
                 </a>
             </div>

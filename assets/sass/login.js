@@ -60,14 +60,12 @@ document.querySelector("#login-form form").addEventListener("submit", function (
 });
 
 
-// すべてのaタグクリック監視、未ログイン時の遷移止め
+// すべてのaタグのクリックを監視し、未ログインなら遷移を止める
 document.querySelectorAll('a').forEach(function(link) {
   link.addEventListener('click', function(event) {
-    // target="_blank" かつ logtrue クラスが付与されている場合のみスルー（遷移を許可）
-    if (link.target === "_blank" && link.classList.contains('logtrue')) return;
-
     if (!isLoggedIn()) {
       event.preventDefault();
+      alert('ログインしてください');
     }
   });
 });
