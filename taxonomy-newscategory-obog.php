@@ -6,12 +6,12 @@
 <section class="l-titleview">
     <img src="<?php echo get_template_directory_uri(); ?>/images/common/img_page_obog.png" alt="OBOG会だよりページビュー">
     <div class="l-titleview-ttl">
-        <!-- <p><?php single_term_title(); ?></p> -->
+        <p><?php single_term_title(); ?></p>
     </div>
 </section>
 
 <!-- カテゴリタブ -->
- <div class="l-category-tab2">
+<div class="l-category-tab2">
     <a href="<?php echo home_url('/news'); ?>" class="txt-middle">
         <div class="cat-left"></div>
         <p class="cat-center">お知らせ一覧</p>
