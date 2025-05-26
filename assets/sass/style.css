@@ -1151,6 +1151,23 @@ span.tag_new {
     margin-bottom: 10px !important;
   }
 }
+@media (max-width: 423px) {
+  .l-category-tab {
+    margin: 40px auto !important;
+  }
+  .l-category-tab2 {
+    gap: 1rem;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .l-category-tab2 a {
+    font-size: 13px;
+    width: calc((100% - 1rem) / 2);
+  }
+  .l-category-tab2 a p {
+    letter-spacing: 0.02rem;
+  }
+}
 @media (max-width: 590px) {
   .l-category-tab {
     margin: 40px auto !important;
