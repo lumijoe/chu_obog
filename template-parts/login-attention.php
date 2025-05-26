@@ -1,5 +1,4 @@
 <!-- login-attention.php -->
-<script src="loginattention.js"></script>
 <?php
 if (!is_user_logged_in()) {
     // ログインしていない場合は、以降のHTMLを出力しない
@@ -14,3 +13,4 @@ if (!is_user_logged_in()) {
     return; // 以降のaboutページのHTMLは出力しない
 }
 ?>
+<script src="loginattention.js"></script>

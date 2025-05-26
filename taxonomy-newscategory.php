@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <!-- ログインアラート -->
-<?php get_template_part('template-parts/login-alert'); ?>
+<?php get_template_part('template-parts/login-attention'); ?>
 
 <!-- titleview -->
 <section class="l-titleview">
