@@ -32,6 +32,20 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div id="overlay"></div>
+<div id="login-form">
+  <button class="close-btn" id="close-btn">✕</button>
+  <h2 class="modal-title">会員専用ページ</h2>
+  <form class="modal-form">
+    <label>ユーザー名<br /><input type="text" id="username" name="username" placeholder="ユーザー名" required /></label><br /><br />
+    <label>パスワード<br /><input type="password" id="password" name="password" placeholder="パスワード" required /></label><br /><br />
+    <button type="submit" class="login-submit">
+      <div class="submit-left"></div>
+      <div>ログインする</div>
+      <img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_right_bgblue.svg" alt="">
+    </button>
+  </form>
+</div>
     <header id="header" class="header">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">

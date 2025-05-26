@@ -6,3 +6,4 @@
         window.location.href = "<?php echo home_url('/'); ?>";
     }
 </script>
+

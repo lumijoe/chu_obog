@@ -21,7 +21,7 @@ get_header();
 </section>
 
 <!--ログインフォーム  -->
-<div id="overlay"></div>
+<!-- <div id="overlay"></div>
 <div id="login-form">
   <button class="close-btn" id="close-btn">✕</button>
   <h2 class="modal-title">会員専用ページ</h2>
@@ -34,7 +34,7 @@ get_header();
       <img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_right_bgblue.svg" alt="">
     </button>
   </form>
-</div>
+</div> -->
 
 <img src="" alt="">
 
