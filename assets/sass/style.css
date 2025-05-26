@@ -982,6 +982,7 @@ span.tag_new {
   color: #29318A;
   line-height: 26px;
   letter-spacing: 0.1rem;
+  border-radius: 3px;
 }
 .l-article article a {
   color: #333;
@@ -1020,6 +1021,7 @@ span.tag_new {
   color: #29318A;
   line-height: 26px;
   letter-spacing: 0.1rem;
+  border-radius: 3px;
 }
 .l-article ul li a {
   color: #333;
