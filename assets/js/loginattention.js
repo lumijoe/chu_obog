@@ -7,14 +7,6 @@ function isLoggedIn() {
     sessionStorage.setItem("loggedIn", "true");
   }
   
-  // 初回ロード時、ログイン済みならフォームもオーバーレイも非表示
-  window.addEventListener("DOMContentLoaded", function () {
-    if (isLoggedIn()) {
-      document.getElementById("login-form").style.display = "none";
-      document.getElementById("overlay").style.display = "none";
-    }
-  });
-  
   // クリックでフォーム表示（何度でも→ログイン済みなら出さない）
   document.addEventListener("click", function (event) {
     const loginForm = document.getElementById("login-form");

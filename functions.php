@@ -226,25 +226,43 @@ function load_env()
 }
 add_action('init', 'load_env');
 
-
 // ========================
-// login.js の読み込みと .env 情報の注入
+// login.js の読み込みのみ（.env情報は渡さない）
 // ========================
 function enqueue_login_script()
 {
-    // login.js の読み込み（/js/login.js）
     wp_enqueue_script(
         'login-js',
-        get_template_directory_uri() . '/js/login.js',
-        array(), // 依存スクリプトがあれば ['jquery'] などを指定
-        null,
-        true // フッターで読み込む
+        get_template_directory_uri() . '/assets/js/login.js',
+        array(),
+        filemtime(get_template_directory() . '/assets/js/login.js'),
+        true
     );
-
-    // JavaScript に .env 情報を渡す
-    wp_localize_script('login-js', 'envVars', [
-        'username' => $_ENV['CROBC_USERNAME'] ?? '',
-        'password' => $_ENV['CROBC_PASSWORD'] ?? '',
-    ]);
 }
 add_action('wp_enqueue_scripts', 'enqueue_login_script');
+
+// ========================
+// カスタムログイン認証（AJAX）
+// ========================
+add_action('wp_ajax_nopriv_custom_login', 'custom_login_handler');
+function custom_login_handler() {
+    session_start();
+    $username = $_POST['username'] ?? '';
+    $password = $_POST['password'] ?? '';
+
+    // .envから値を取得
+    $env_username = $_ENV['CROBC_USERNAME'] ?? '';
+    $env_password = $_ENV['CROBC_PASSWORD'] ?? '';
+
+    if ($username === $env_username && $password === $env_password) {
+        $_SESSION['loggedIn'] = true;
+        wp_send_json_success();
+    } else {
+        wp_send_json_error('ユーザー名またはパスワードが正しくありません。');
+    }
+    wp_die();
+}
+
+add_action('wp_head', function() {
+    echo '<script>window.wp_ajax_url = "' . admin_url('admin-ajax.php') . '";</script>';
+});
