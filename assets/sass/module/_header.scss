@@ -390,4 +390,13 @@
         --bs-backdrop-bg: #000;
         --bs-backdrop-opacity: 0.7 !important;
     }
-
+@media (max-width: 991px) {
+    .header .navbar {
+        height: 78px;
+    }
+}
+@media (max-width: 538px) {
+    .header .navbar {
+        height: 48px;
+    }
+}
