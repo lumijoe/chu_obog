@@ -5,8 +5,13 @@
  * Description: This is the template
  */
 
-if (!is_user_logged_in()) {
+if (is_user_logged_in()) {
     get_header(); // ヘッダーを表示
+    ?>
+    
+    <?php
+} else {
+    get_header();
     ?>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -16,8 +21,9 @@ if (!is_user_logged_in()) {
     </script>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/login-shadow.js"></script>
     <?php
-    return; // 以降のHTMLを出力しない
+    return;
 }
+
 ?>
 
 <!-- titleview -->
