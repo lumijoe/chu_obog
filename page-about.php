@@ -5,9 +5,21 @@
  * Description: This is the template
  */
 
-get_header();
+if (!is_user_logged_in()) {
+    get_header(); // ヘッダーを表示
+    ?>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("overlay").style.display = "block";
+        document.getElementById("login-form").style.display = "block";
+      });
+    </script>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/login-shadow.js"></script>
+    <?php
+    return; // 以降のHTMLを出力しない
+}
 ?>
-<?php get_template_part('template-parts/login-attention'); ?>
+
 <!-- titleview -->
 <section class="l-titleview">
     <img src="<?php echo get_template_directory_uri(); ?>/images/about/img_page_about.png" alt="OBOGクラブについて">
