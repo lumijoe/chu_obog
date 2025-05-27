@@ -232,10 +232,10 @@ add_action('init', 'load_env');
 function enqueue_login_script()
 {
     wp_enqueue_script(
-        'login-js',
-        get_template_directory_uri() . '/assets/js/login.js',
+        'login2-js',
+        get_template_directory_uri() . '/assets/js/login2.js',
         array(),
-        filemtime(get_template_directory() . '/assets/js/login.js'),
+        filemtime(get_template_directory() . '/assets/js/login2.js'),
         true
     );
 }

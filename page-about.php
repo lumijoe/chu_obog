@@ -1,18 +1,12 @@
 <?php
-
 /**
  * Template Name: page-about
  * Description: This is the template
  */
+get_header(); 
+?>
 
-if (is_user_logged_in()) {
-    get_header(); // ヘッダーを表示
-    ?>
-    
-    <?php
-} else {
-    get_header();
-    ?>
+<?php if (!is_user_logged_in()) { ?>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("overlay").style.display = "block";
@@ -21,10 +15,8 @@ if (is_user_logged_in()) {
     </script>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/login-shadow.js"></script>
     <?php
-    return;
-}
-
-?>
+    return; 
+} ?>
 
 <!-- titleview -->
 <section class="l-titleview">

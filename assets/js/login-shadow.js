@@ -68,7 +68,8 @@ function isLoggedIn() {
           setLoggedIn();
           document.getElementById("login-form").style.display = "none";
           document.getElementById("overlay").style.display = "none";
-          location.reload(); // 必要ならリロード
+          // ログイン成功後に現在のページにリダイレクト
+          window.location.href = window.location.pathname; // 現在のパスにリダイレクト
         } else {
           alert(data.data || "ログインに失敗しました。");
         }
