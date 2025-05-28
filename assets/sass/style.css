@@ -1401,4 +1401,34 @@ button {
 a.line-display {
   text-decoration-line: underline !important;
   text-decoration-color: currentColor;
+}
+
+.btn-mt-wide {
+  margin-top: 3rem;
+}
+
+.wrapper-404 {
+  padding-bottom: 5rem;
+}
+
+#page-404 {
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#page-404 h2 {
+  font-size: 4rem !important;
+  font-weight: 400 !important;
+}
+#page-404 h3 {
+  font-size: clamp(1.2rem, 6vw, 2rem) !important;
+}
+#page-404 p {
+  font-size: clamp(12px, 4vw, 16px) !important;
+  text-align: center !important;
+  letter-spacing: 0.15rem !important;
+  padding-top: 2rem !important;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }/*# sourceMappingURL=style.css.map */
