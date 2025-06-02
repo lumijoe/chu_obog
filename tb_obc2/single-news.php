@@ -65,17 +65,17 @@
                             class="lazyloaded"
                             style="max-width:100%;">
                     <?php endif; ?>
-                    <!-- PDF -->
-                    <?php if (get_field('post_pdf') && get_field('post_pdf_title')) : ?>
+
+                    <!-- ACF本文 -->
+                    <p><?php the_field('post_text'); ?></p>
+                     <!-- PDF -->
+                     <?php if (get_field('post_pdf') && get_field('post_pdf_title')) : ?>
                         <p class="pdf-title">
                             <a href="<?php the_field('post_pdf'); ?>" target="_blank" rel="noopener noreferrer" style="color: #29318a;">
                                 <?php the_field('post_pdf_title'); ?>
                             </a>
                         </p>
                     <?php endif; ?>
-
-                    <!-- ACF本文 -->
-                    <p><?php the_field('post_text'); ?></p>
                     <!-- 外部リンク -->
                     <?php if (get_field('post_url')) : ?>
                         <p class="post-url">
