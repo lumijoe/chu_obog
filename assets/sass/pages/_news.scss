@@ -229,8 +229,6 @@ span.tag_new {
     text-align: center;
     font-weight: 550;
     letter-spacing: 0.1rem;
-    padding-left: 8%;
-    padding-right: 8%;
 }
 .l-side-grid {
     display: grid;
@@ -269,6 +267,7 @@ span.tag_new {
 .single-nav-other p a {
     color: #29318A!important;
     text-decoration: none!important;
+    font-size: clamp(13px, 3vw, 14px);
 }
 .aside-area {
     padding-top: 2rem;
@@ -374,3 +373,15 @@ span.tag_new {
     }
     
   }
+
+@media (max-width: 500px) {
+    .l-titleview-ttl p  {
+        font-size: clamp(14px, 5vw, 35px);
+    }
+    .l-titleview-ttl {
+        left: 0.8rem;
+        right: 0.8rem;
+        width: calc(100% - 1.6rem);
+        justify-content: center;
+    }
+}

@@ -63,7 +63,8 @@
                             width="300"
                             data-src="<?php the_field('post_image'); ?>"
                             decoding="async"
-                            class="lazyloaded">
+                            class="lazyloaded"
+                            style="max-width:100%;">
                     <?php endif; ?>
                     <!-- PDF -->
                     <?php if (get_field('post_pdf') && get_field('post_pdf_title')) : ?>
@@ -89,7 +90,7 @@
                 </article>
 
                 <!-- 前後の記事ナビゲーション -->
-                <nav style="margin-top: 3rem; text-align: center;" class="single-nav-other">
+                <nav style="margin-top: 2rem; margin-bottom:2rem; text-align: center;" class="single-nav-other">
                     <p><?php previous_post_link('« %link'); ?></p>
                     <p><?php next_post_link('%link »'); ?></p>
                 </nav>
