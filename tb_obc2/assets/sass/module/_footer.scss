@@ -1,0 +1,191 @@
+/* ===========================================
+ *  フッター
+ * ========================================== 
+ */
+ .footer {
+    #pageTop {
+        color: #ffffff!important;
+        background-color: #29318a!important;
+    }
+    background-color: #0E1346;
+    position: relative;
+    section {
+        .is-corporate {
+            margin-bottom: 0!important;
+            figcaption {
+                font-size: 12px;
+                text-align: end;
+                margin-right: 10px;
+                margin-bottom: 3px;
+                color: white;
+                text-decoration: none!important;
+                font-size: 16px;
+                padding-bottom: 6px;
+                font-weight: 500;
+                a {
+                    color: white;
+                }
+            }
+            img {
+                width: 300px;
+                height: auto;
+                max-width: 100%;
+            }
+        }
+    }
+    .footer-upper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;    
+        &-inner {
+            padding-top: 80px;
+            padding-bottom: 80px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            max-width: 1068px;
+            width: 100%;
+            margin: 0 5%;
+            ul li a {
+                color: white;
+                text-decoration: none!important;
+            }
+            ul {
+                padding-left: 0!important;
+            }
+            .ttl_l {
+                font-size: 20px;
+            }
+            .ttl_m {
+                font-size: 16px;
+                font-weight: 340;
+                letter-spacing: 0.1rem;
+            }
+            .is-row {
+                display: flex;
+                flex-direction: row;
+                gap: 80px;
+                .nav-wrapper {
+                    margin-bottom: 0!important;
+                    li:first-child {
+                        padding-bottom: 18px!important;
+                        font-weight: 440;
+                        letter-spacing: 0.1rem;
+                        margin-bottom: 10px;
+                    }
+                    li + li {
+                        padding-bottom: 15px!important;
+                    }
+                }
+            }
+        }
+    }
+    .footer-bottom {
+        background-color: white;
+        height: 130px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .is-row {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            figure {
+                margin: 0!important;
+            }
+            
+            .is-footerlogo {
+                height: 40px;
+                width: auto;
+                margin-right: 20px;
+            }
+            .sns_logo {
+                max-height: 38px;
+                width: auto;
+            }
+        }
+        .is-copy {
+            font-size: 14px;
+        }
+        &-inner {
+            width: 1100px;
+            margin: 0 3%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    #pageTop {
+        z-index: 500;
+        display: flex;
+        justify-content: flex-end;
+        position: fixed;
+        bottom: 40px;
+        right: 15px;
+        border: 2px solid #29318a;
+        border-radius: 99px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+        &.show {
+            display: block;
+            opacity: 1;
+        }
+    }
+}
+@media (max-width: 864px) {
+    .footer .footer-upper-inner {
+        flex-direction: column;
+    }
+    .footer section .is-corporate {
+        margin: 0 auto;
+        & figcaption {
+            text-align: center;
+            margin-right: 0px;
+        }
+    }
+    .footer .footer-bottom-inner {
+        flex-direction: column;
+    }
+    .footer .footer-bottom .is-row .is-footerlogo {
+        margin-right: 0px;
+    }
+    .footer .footer-bottom .is-row {
+        margin-bottom: 8px;
+    }
+
+   
+}
+@media (max-width: 536px) {
+    .footer .footer-upper-inner .is-row {
+        flex-direction: column;
+        gap: 35px;
+        margin-bottom: 35px;
+    }
+    .footer section .is-corporate figcaption {
+        text-align: center;
+        margin-right: 0px;
+    }
+    .footer .footer-bottom .is-row {
+        flex-direction: column-reverse;
+        padding-bottom: 0.3rem;
+        .is-footerlogo {
+            width: 66%;
+            margin: 0 17%;
+        }
+    }
+    .footer .footer-bottom-inner {
+        margin-top: 2rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .footer .footer-bottom .is-row {
+        margin-bottom: 0px;
+        margin-top: 25px;
+    }
+
+   
+}

@@ -1,0 +1,119 @@
+li, ol, ul {
+    text-decoration: none;
+    list-style-type: none;
+} 
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    overflow-x: hidden;
+}
+hr {
+    opacity: 0.17;
+}
+// .add-icon {
+//     border-radius: 60px;
+//     background-color: #F5F5F5;
+//     display: flex;
+//     font-size: 14px;
+//     width: 216px;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     height: 60px;
+//     padding-left: 25px;
+//     a {
+//         color: #0E1346;
+//         text-decoration: none!important;
+//         font-weight: 400;
+//         letter-spacing: 0.04rem;
+//     }
+// }
+// .add-icon::after {
+//     content: '';
+//     display: inline-block;
+//     width: 32px;
+//     height: 32px;
+//     margin-left: 0.5em;
+//     background-image: url('../../images/common/icon_right_bgblue.svg');
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     vertical-align: middle;
+// }
+// .add-icon:hover {
+//     opacity: 0.8;
+//     background-color: #f5f5f5;
+// }
+// button {
+//     display: flex;
+//     align-items: center;
+//     margin: 0 auto;
+// }
+
+
+// 新しいadd-icon↓
+.add-icon {
+    border-radius: 60px;
+    background-color: #F5F5F5;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    width: 216px;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60px;
+    padding-left: 25px;
+    color: #0E1346;
+    text-decoration: none!important;
+    font-weight: 400;
+    letter-spacing: 0.04rem;
+    margin: 0 auto;
+}
+.add-icon.next::after {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-left: 0.5em;
+    background-image: url('../../images/common/icon_right_bgblue.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+.add-icon:hover {
+    opacity: 0.8;
+    background-color: #f5f5f5;
+}
+button {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+a.line-display {
+    text-decoration-line:underline!important ;
+    text-decoration-color: currentColor;
+}
+.btn-mt-wide {
+    margin-top: 3rem;
+}
+.wrapper-404 {
+    padding-bottom: 5rem;
+}
+#page-404 {
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        h2 {
+            font-size: 4rem!important;
+            font-weight: 400!important;
+        }
+        h3 {
+            font-size: clamp(1.2rem, 6vw, 2rem)!important;
+        }
+        p {
+            font-size: clamp(12px, 4vw, 16px)!important;
+            text-align: center!important;
+            letter-spacing: 0.15rem!important;
+            padding-top: 2rem!important;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+}
